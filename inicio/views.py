@@ -5,7 +5,8 @@ from django.shortcuts import render
 import random
 
 def inicio(request):
-    return HttpResponse('Hola wachin')
+    return render(request, 'inicio/index.html')
+
 
 # http://127.0.0.1:8000/
 
