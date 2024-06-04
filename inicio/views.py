@@ -4,7 +4,7 @@ from django.template import Template, Context, loader
 from django.shortcuts import render
 import random
 
-def inicio(request):
+def home(request):
     return render(request, 'inicio/index.html')
 
 
