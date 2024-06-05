@@ -22,7 +22,7 @@
     height: 45px;
     align-items: center;
     justify-content: center;
-    transition: 0.5s;
+    transition: 1.5s;
     z-index: 99;
 }
 /*** Spinner End ***/
@@ -31,7 +31,7 @@
 /*** Button Start ***/
 .btn {
     font-weight: 600;
-    transition: .5s;
+    transition: 1.5s;
 }
 
 .btn-square {
@@ -66,7 +66,7 @@
 }
 
 .btn.border-secondary {
-    transition: 0.5s;
+    transition: 1.5s;
 }
 
 .btn.border-secondary:hover {
@@ -120,7 +120,7 @@
 .navbar .navbar-nav .nav-link {
     padding: 10px 15px;
     font-size: 16px;
-    transition: .5s;
+    transition: 1.5s;
 }
 
 .navbar {
@@ -172,7 +172,7 @@
 }
 
 #searchModal .modal-content {
-    background: rgba(255, 255, 255, .8);
+    background: rgba(210, 224, 255, 0.8);
 }
 /*** Navbar End ***/
 
@@ -192,9 +192,9 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 25px;
-    background: linear-gradient(rgba(255, 181, 36, 0.7), rgba(255, 181, 36, 0.7));
+    transform: translate(-30%, -30%);
+    font-size: 40px;
+    background: linear-gradient(rgba(255, 255, 255, 0.7),rgba(36, 255, 244, 0.7));
 }
 
 .carousel-control-next,
@@ -202,7 +202,7 @@
     width: 48px;
     height: 48px;
     border-radius: 48px;
-    border: 1px solid var(--bs-white);
+    border: 5px solid var(--bs-white);
     background: var(--bs-primary);
     position: absolute;
     top: 50%;
@@ -210,16 +210,16 @@
 }
 
 .carousel-control-next {
-    margin-right: 20px;
+    margin-right: 10px;
 }
 
 .carousel-control-prev {
-    margin-left: 20px;
+    margin-left: 10px;
 }
 
 .page-header {
     position: relative;
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../img/cart-page-header-img.jpg);
+    background: linear-gradient(rgba(22, 255, 255, 0.3), rgba(0, 0, 0, 0.3)), url(../img/cart-page-header-img.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -299,7 +299,7 @@
 
 .fruite .fruite-item {
     height: 100%;
-    transition: 0.5s;
+    transition: 1.5s;
 }
 .fruite .fruite-item:hover {
     box-shadow: 0 0 55px rgba(0, 0, 0, 0.4);
@@ -483,7 +483,7 @@
 .footer .footer-item .btn-link {
     line-height: 35px;
     color: rgba(255, 255, 255, .5);
-    transition: 0.5s;
+    transition: 1.5s;
 }
 
 .footer .footer-item .btn-link:hover {
