@@ -9,4 +9,8 @@ class Usuario(models.Model):
     apellido = models.CharField(max_length=40)
     correo = models.CharField(max_length=40)
     
-    
+
+class Articulo(models.Model):
+    nombre = models.CharField(max_length=40)
+    marca = models.CharField(max_length=40)
+    precio = models.FloatField(max_length=40)

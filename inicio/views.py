@@ -71,7 +71,7 @@ def probando(request):
 #     return render(request,"inicio/crear_usuario.html")
 
 def crear_usuario(request):
-    if request.method == "POST":
+    if request.method == 'POST':
         formulario = CrearUsuarioFormulario(request.POST)
         if formulario.is_valid():
                 datos = formulario.cleaned_data
@@ -84,4 +84,9 @@ def crear_usuario(request):
     return render(request,"inicio/crear_usuario.html", {'formulario':formulario})
 
 def bienvenido(request):
-    return render(request,'inicio/bienvenido.html')
+    print('&&&&&&&&&&&&& DATOS DE USUARIO:',request)
+    usuarios = Usuario.objects.all()
+    return render(request,'inicio/bienvenido.html',{'usuarios':usuarios})
+
+def catalogo(request):
+    ...
