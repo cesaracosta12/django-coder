@@ -4,7 +4,7 @@ from django.template import Template, Context, loader
 from django.shortcuts import render,redirect
 import random
 from .models import Usuario
-from .forms import CrearUsuarioFormulario
+from .forms import CrearUsuarioFormulario, BuscarUsuario
 
 
 def home(request):
@@ -85,8 +85,17 @@ def crear_usuario(request):
 
 def bienvenido(request):
     print('&&&&&&&&&&&&& DATOS DE USUARIO:',request)
-    usuarios = Usuario.objects.all()
-    return render(request,'inicio/bienvenido.html',{'usuarios':usuarios})
+    
+    formulariobuscar = BuscarUsuario(request.GET)
+    if formulariobuscar.is_valid():
+        nombre = formulariobuscar.cleaned_data['nombre']
+        usuarios = Usuario.objects.filter(nombre__icontains=nombre)
+    
+    # usuarios = Usuario.objects.all()
+    return render(request,'inicio/bienvenido.html',{'usuarios':usuarios, 'formulariobuscar':formulariobuscar})
 
 def catalogo(request):
     ...
+    
+def eliminar_usuario(request):
+    return redirect('bienvenido')

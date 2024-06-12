@@ -8,6 +8,12 @@
 {% endblock h1_header %}
 
 
+<form action={% url "bienvenido" %} method="get">
+{{formulariobuscar}}
+<input type="submit" value="Buscar">
+</form>
+
+{% comment %} {% if usuarios %} {% endcomment %}
 {% for usuario in usuarios %}
 
 <div class="container-fluid featurs py-5">
@@ -29,5 +35,7 @@
     </div>
 </div>
 {% endfor %}
-
+{% comment %} {% else %}
+<p>no hay usuarios</p>
+{% endif %} {% endcomment %}
 {% endblock main %}
